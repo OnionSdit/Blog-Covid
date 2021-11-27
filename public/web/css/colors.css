@@ -8,7 +8,7 @@
 **************************************/
 
 
-/* COLORS 
+/* COLORS
 **************************************/
 
 .authorbox p a,
@@ -24,7 +24,7 @@ a:focus,
 .navbar-inverse .navbar-nav .nav-link.active,
 .navbar-inverse .navbar-nav .nav-link.open,
 .navbar-inverse .navbar-nav .open > .nav-link {
-    color: #3197d6 !important;
+    color: #2e3192 !important;
 }
 
 .dmtop,
@@ -42,7 +42,7 @@ a:focus,
 .btn:focus,
 .navbar-inverse .navbar-toggler {
     color: #ffffff !important;
-    background-color: #3197d6;
+    background-color: black;
 }
 
 .blockquote {
@@ -54,7 +54,7 @@ a:focus,
 }
 
 
-/* OTHER COLORS 
+/* OTHER COLORS
 **************************************/
 
 .navbar-nav .nav-link.active.color-pink-hover,
