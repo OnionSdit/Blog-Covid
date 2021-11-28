@@ -24,7 +24,7 @@ a:focus,
 .navbar-inverse .navbar-nav .nav-link.active,
 .navbar-inverse .navbar-nav .nav-link.open,
 .navbar-inverse .navbar-nav .open > .nav-link {
-    color: #2e3192 !important;
+    color: #3197d6 !important;
 }
 
 .dmtop,
@@ -42,7 +42,7 @@ a:focus,
 .btn:focus,
 .navbar-inverse .navbar-toggler {
     color: #ffffff !important;
-    background-color: black;
+    background-color: #3197d6;
 }
 
 .blockquote {
