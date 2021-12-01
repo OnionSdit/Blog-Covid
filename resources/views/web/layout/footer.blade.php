@@ -1,43 +1,52 @@
-<footer class="footer">
+<style>
+            .footer{
+            background:#00b4e5;
+            width: 100%;
+            padding:50px;
+            padding-top: 40px;
+            /* text-align:center; */
+            float: left;
+            color:#FFF;
+        }
+        .footer a{
+            padding-right: 10px;
+        }
+        .footer a:hover{
+            color: rgb(0, 255, 55);
+        }
 
-    <footer class="w-100 py-4 flex-shrink-0">
-        <div class="container py-4">
-            <div class="row gy-4 gx-5">
-                <div class="col-lg-4 col-md-6">
-                    <h5 class="h1 text-white">FB.</h5>
-                    <p class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-                    <p class="small text-muted mb-0">&copy; Copyrights. All rights reserved. <a class="text-primary" href="#">Bootstrapious.com</a></p>
-                </div>
-                <div class="col-lg-2 col-md-6">
-                    <h5 class="text-white mb-3">Quick links</h5>
-                    <ul class="list-unstyled text-muted">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Get started</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 col-md-6">
-                    <h5 class="text-white mb-3">Quick links</h5>
-                    <ul class="list-unstyled text-muted">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Get started</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <h5 class="text-white mb-3">Newsletter</h5>
-                    <p class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-                    <form action="#">
-                        <div class="input-group mb-3">
-                            <input class="form-control" type="text" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
-                            <button class="btn btn-primary" type="button">SEND</i></button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </footer>
+        .footer-trai{
+            float: left;
+
+        }
+
+        .footer-phai{
+            float: right;
+            /* text-align: center; */
+        }
+        .footer   p{
+            margin: 10px
+        }
+
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="footer">
+    <div class="footer-trai">
+       <p style="font-size: 17px "> © Bản quyền thuộc TRUNG TÂM CÔNG NGHỆ PHÒNG, CHỐNG DỊCH COVID-19 QUỐC GIA </p>
+
+        {{-- <h3>LIÊN HỆ: </h3> --}}
+        <p> <i class="fa fa-envelope-o" aria-hidden="true"></i> Email: covid19@suckhoedoisong.vn</p>
+        <p> <i class="fa fa-phone" aria-hidden="true"></i> Hotline: 19009095</p>
+        <p> <i class="fa fa-map-marker" aria-hidden="true"></i> Địa chỉ: Số 138A Giảng Võ - Quận Ba Đình - TP. Hà Nội</p>
+
+    </div>
+    <div class="footer-phai">
+        <a href="#" style="font-size: 17px ">Thống kê</a>
+        <a href="#" style="font-size: 17px ">Kiến thức</a>
+        <a href="#" style="font-size: 17px ">Liên hệ</a><br>
+<br>
+        <p>Quy chế hoạt động </p>
+        <p>Chính sách bảo mật</p>
+    </div>
 </div>
-</footer><!-- end footer -->

@@ -1,6 +1,6 @@
 @extends('web.layout.master')
 
-@section('title', 'Cập nhật tin tức Covid-19')
+@section('title', 'Trang Chủ | Website Cập nhật tin tức Covid-19')
 
 @section('content')
 
