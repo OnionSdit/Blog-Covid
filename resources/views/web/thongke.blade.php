@@ -379,13 +379,12 @@
                         ca</span><span class="daynow">Hôm nay</span><span class="die">Tử vong</span></div>
                 <div class="tbody" id="render-table">
                 </div>
-            </div>  
+            </div>
         </div>
         <div class="box-juncture">
             <canvas id="myChart" width="300" height="200"></canvas>
         </div>
     </div>
-
     <script>
         function l(t, e, a) {
             var i = document.createElement("script");

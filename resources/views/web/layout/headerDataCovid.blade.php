@@ -337,7 +337,6 @@
         <div class="home__statistical-nav">
             <ul>
                 <li><a href="javascript:void(0);" id="tabvi" title="" class="active">Việt Nam</a></li>
-
             </ul>
         </div>
         <div class="home__statistical-nav-content">

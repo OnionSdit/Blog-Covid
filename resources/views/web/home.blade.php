@@ -9,7 +9,7 @@
         <br>
         <div class="container-fluid">
             <div class="masonry-blog clearfix">
-                @foreach ($highlight as $key => $post)
+                @foreach ($highlight as $key => $post) 
                     @if ($key == 0)
                         <div class="second-slot">
                         @elseif($key == 1)

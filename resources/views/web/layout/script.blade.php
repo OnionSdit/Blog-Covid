@@ -4,9 +4,10 @@
 <script src="/web/js/tether.min.js"></script>
 <script src="/web/js/bootstrap.min.js"></script>
 <script src="/web/js/custom.js"></script>
+{{-- import thu vien axios --}}
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+{{-- thu vien chart js --}}
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>
-
 <script>
     $(document).ready(function() {
 
@@ -30,18 +31,18 @@
                 const deathElement = document.getElementById("death");
                 const todayDeathElement = document.getElementById("today-death");
                 //data table
-                //DATA
-                const cases = data.total.internal.cases;
-                const todayCase = " + " + data.today.internal.cases;
+                // GET DATA
+                const cases = data.total.internal.cases.toLocaleString();
+                const todayCase = " + " + data.today.internal.cases.toLocaleString();
 
-                const treating = data.total.internal.treating;
-                const todayTreating = " " + data.today.internal.treating;
+                const treating = data.total.internal.treating.toLocaleString();
+                const todayTreating = " " + data.today.internal.treating.toLocaleString();
 
-                const recovered = data.total.internal.recovered;
-                const todayRecovered = " + " + data.today.internal.recovered;
+                const recovered = data.total.internal.recovered.toLocaleString();
+                const todayRecovered = " + " + data.today.internal.recovered.toLocaleString();
 
-                const death = data.total.internal.death;
-                const todayDeath = " + " + data.today.internal.death;
+                const death = data.total.internal.death.toLocaleString();
+                const todayDeath = " + " + data.today.internal.death.toLocaleString();
 
                 //SET DATA
                 casesElement.innerText = cases;
@@ -61,6 +62,12 @@
             }
         };
 
+        const getWorld = async () => {
+            const response = await axios.get(`${BASE_URL}`);
+            const data = response.data;
+
+        }
+        //Chart
         const renderChart = async () => {
             const response = await axios.get(`${BASE_URL}`);
             const data = response.data;
@@ -110,25 +117,25 @@
             const myChart = new Chart(ctx, state);
         }
 
+        //TABLE
         const renderTable = async () => {
             const response = await axios.get(`${BASE_URL}`);
             const data = response.data;
-
             const locations = data.locations;
 
             let html = "";
             locations.map((item) => {
-                html += `<div class="row"><span class="city">${item.name}</span><span class="total">${item.cases}</span><span
-                        class="daynow red">+${item.casesToday}</span><span class="die">${item.death}</span></div>`
+                html += `<div class="row"><span class="city">${item.name}</span><span class="total">${item.cases.toLocaleString()}</span><span
+                        class="daynow red">+${item.casesToday.toLocaleString()}</span><span class="die">${item.death.toLocaleString()}</span></div>`
             })
             const tableCovid = document.getElementById("render-table");
             tableCovid.innerHTML = html;
         }
 
-        // setInterval(function(){ getTodoItems(); }, 3000);
+        //run function
         renderTable();
         renderChart();
         getTodoItems();
-
+        getWorld();
     });
 </script>

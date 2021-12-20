@@ -20,7 +20,7 @@ class AuthController extends Controller
     public function login(Request $request)
     {
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-            return redirect('/');
+            return redirect('/admin/post');
         }
         return redirect()->route('web.auth.login')->with('error', 'Sai Email hoặc Mật khẩu ! Vui lòng đăng nhập lại! ');
     }
