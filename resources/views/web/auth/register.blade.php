@@ -2,8 +2,6 @@
 
 @section('content')
     <section class="section wb mt-5">
-
-
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -94,18 +92,18 @@
             }
 
         </style>
-
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
         <body>
             <div class="container">
-                <div class="col-md-6 mx-auto text-center">
+                <div class="col-md-6 mx-auto text-center"  style="margin: -40px">
                     <div class="header-title">
-                        <h1 class="wv-heading--title" style="margin-bottom: -40px">
-                            ĐĂNG NHẬP
+                        <h1 class="wv-heading--title">
+                            ĐĂNG KÝ TÀI KHOẢN
                         </h1>
-                    </div>
-                    @if (session('error'))
+                        <h2 class="wv-heading--subtitle">
+                            Nhanh chóng và dễ dàng.
+                        </h2>
+                        @if (session('error'))
                         <div class="col-lg-12">
                             <div class="alert alert-danger"> {{ session('error') }} </div>
                         </div>
@@ -115,12 +113,17 @@
                             <div class="alert alert-success"> {{ session('success') }} </div>
                         </div>
                     @endif
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-md-4 mx-auto">
                         <div class="myform form ">
-                            <form class="form-wrapper" action="{{ route('web.auth.login') }}" method="post">
+                            <form class="form-wrapper" action="{{ route('web.auth.store') }}" method="POST">
                                 @csrf
+                                <div class="form-group">
+                                    <input type="text" name="name" class="form-control my-input" id="name"
+                                        placeholder="Name">
+                                </div>
                                 <div class="form-group">
                                     <input type="email" name="email" class="form-control my-input" id="email"
                                         placeholder="Email">
@@ -131,10 +134,23 @@
                                 </div>
 
                                 <div class="text-center ">
-                                    <button type="submit" class=" btn btn-block send-button tx-tfm">Đăng nhập</button>
+                                    <button type="submit" class=" btn btn-block send-button tx-tfm">Tạo tài khoản</button>
                                 </div>
+                                <div class="col-md-12 ">
+                                    <div class="login-or">
+                                       <hr class="hr-or">
+                                       <span class="span-or">or</span>
+                                    </div>
+                                 </div>
+                                 <div class="form-group">
+                                    <a class="btn btn-block g-button" href="{{ route('web.auth.login') }}">
+                               Đăng nhập
+                                    </a>
+                                 </div>
 
-                                <p class="small mt-3"> Đăng nhập để sử dụng đầy đủ dịch vụ và tính năng của chúng tôi
+                                <p class="small mt-3">Bằng cách nhấp vào Đăng ký, bạn đồng ý với
+                                    <a href="#" class="ps-hero__content__link">điều khoản sử dụng </a> và <a href="#">chính
+                                        sách quyền riêng tư</a>.
                                 </p>
                             </form>
                         </div>

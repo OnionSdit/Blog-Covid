@@ -12,18 +12,53 @@ use Illuminate\Support\Facades\Mail;
 
 class AuthController extends Controller
 {
+
+    public function register()
+    {
+        return view('web.auth.register');    }
+
+    public function store(Request $request)
+    {
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required|unique:users|email',
+            'password' => 'required|min:6|max:32',
+        ]);
+
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => bcrypt($request->password) //Hash::make($request->password)
+        ]);
+
+        return redirect()->route('web.auth.store')->with('success', 'Tạo tài khoản thành công, mời bạn đăng nhập!');
+    }
+
     public function formLogin()
     {
+        $user = Auth::user();
+        if($user) {
+            return redirect('/');
+        }
+
         return view('web.auth.login');
     }
 
     public function login(Request $request)
     {
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-            return redirect('/admin/post');
+            $user = Auth::user()->is_admin;
+            if($user == 1) {
+                return redirect()->route('admin.post.index');
+            }
         }
         return redirect()->route('web.auth.login')->with('error', 'Sai Email hoặc Mật khẩu ! Vui lòng đăng nhập lại! ');
     }
+
+    // public function formRegister(){
+    //     return view('web.auth.register');
+    // }
+
 
     public function logout()
     {

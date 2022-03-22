@@ -24,7 +24,7 @@ class AuthController extends Controller
     public function logout()
     {
         Auth::logout();
-        return redirect()->route('admin.auth.login');
+        return redirect()->route('web.auth.login');
     }
 
     public function profile()

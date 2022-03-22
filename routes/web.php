@@ -4,10 +4,14 @@ use App\Http\Controllers\Amin\CategoryController;
 use App\Http\Controllers\Amin\ContactController;
 use App\Http\Controllers\Amin\PostController;
 use App\Http\Controllers\Amin\UserController;
+use App\Http\Controllers\Web\UserControllers;
 use App\Http\Controllers\Web\AuthController as WebAuthController;
 use App\Http\Controllers\Amin\AuthController;
 use App\Http\Controllers\Web\WebController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Routing\Router;
+
+
 
 Route::prefix('admin')->group(function() {
     Route::get('login', [AuthController::class, 'login'])
@@ -115,6 +119,12 @@ Route::post('contact', [WebController::class, 'sendContact'])
 Route::get('login', [WebAuthController::class, 'formLogin']);
 Route::post('login', [WebAuthController::class, 'login'])
     ->name('web.auth.login');
+
+Route::get('register', [WebAuthController::class, 'register']);
+Route::post('register', [WebAuthController::class, 'store'])
+    ->name('web.auth.store');
+
+
 Route::get('logout', [WebAuthController::class, 'logout']);
 
 Route::get('forgot-password', [WebAuthController::class, 'forgotPassword']);
