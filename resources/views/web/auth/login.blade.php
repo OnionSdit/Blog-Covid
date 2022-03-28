@@ -136,6 +136,17 @@
 
                                 <p class="small mt-3"> Đăng nhập để sử dụng đầy đủ dịch vụ và tính năng của chúng tôi
                                 </p>
+                                <div class="col-md-12 ">
+                                    <div class="login-or">
+                                       <hr class="hr-or">
+                                       <span class="span-or">or</span>
+                                    </div>
+                                 </div>
+                                 <div class="form-group">
+                                    <a class="btn btn-block g-button" href="{{ route('web.auth.store') }}">
+                               Đăng kí
+                                    </a>
+                                 </div>
                             </form>
                         </div>
                     </div>

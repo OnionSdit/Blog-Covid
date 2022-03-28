@@ -19,7 +19,10 @@ class WebController extends Controller
         $new = Post::where('new_post', 1)->take(20)->get();
         return view('web.home', compact('highlight', 'new'));
     }
-
+    public function showIndexShop()
+    {
+        return view('web.shop.index');
+    }
     public function post($slug)
     {
         $post = Post::where('slug', $slug)->first();

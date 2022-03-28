@@ -23,13 +23,13 @@
                         <a class="nav-link" href="/category/hoat-dong-dia-phuong">Hoạt động địa phương</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Tra Cứu </a>
+                        <a class="nav-link" href="#">Thiết bị y tế </a>
                     </li>
                      <li class="nav-item">
                         <a class="nav-link" href="/contact">Liên hệ</a>
                     </li>
                 </ul>
-                {{-- <ul class="nav navbar-top-links navbar-right nav-item">
+                <ul class="nav navbar-top-links navbar-right nav-item">
                     <!-- /.dropdown -->
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color: #fff">
@@ -45,7 +45,7 @@
                         <!-- /.dropdown-user -->
                     </li>
                     <!-- /.dropdown -->
-                </ul> --}}
+                </ul>
             </div>
         </nav>
     </div><!-- end container-fluid -->

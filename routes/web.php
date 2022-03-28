@@ -132,3 +132,7 @@ Route::post('send-mail-forgot-password', [WebAuthController::class, 'sendMail'])
     ->name('send-mail');
 Route::get('reset-password', [WebAuthController::class, 'formReset'])->name('form-reset');
 Route::post('reset-password', [WebAuthController::class, 'resetPassword'])->name('reset-password');
+
+
+Route::get('cuahang', [WebController::class, 'showIndexShop'])
+    ->name('web.shop');
