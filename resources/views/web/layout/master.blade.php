@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <!-- Mobile Metas -->
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+        <link rel="shortcut icon" href="/web/images/favicon.ico" type="image/x-icon" />
         <!-- Site Metas -->
         <title> @yield('title')</title>
         <meta name="keywords" content="">

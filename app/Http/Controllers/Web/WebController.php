@@ -19,9 +19,15 @@ class WebController extends Controller
         $new = Post::where('new_post', 1)->take(20)->get();
         return view('web.home', compact('highlight', 'new'));
     }
+
+
     public function showIndexShop()
     {
         return view('web.shop.index');
+    }
+
+    public function shoppingCart(){
+        return view('web.shop.cart');
     }
     public function post($slug)
     {

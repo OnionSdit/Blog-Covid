@@ -134,5 +134,7 @@ Route::get('reset-password', [WebAuthController::class, 'formReset'])->name('for
 Route::post('reset-password', [WebAuthController::class, 'resetPassword'])->name('reset-password');
 
 
-Route::get('cuahang', [WebController::class, 'showIndexShop'])
+Route::get('shopping', [WebController::class, 'showIndexShop'])
     ->name('web.shop');
+    Route::get('shoppingCart', [WebController::class, 'shoppingCart'])
+    ->name('web.cart');

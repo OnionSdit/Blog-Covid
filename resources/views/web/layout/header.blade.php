@@ -23,7 +23,7 @@
                         <a class="nav-link" href="/category/hoat-dong-dia-phuong">Hoạt động địa phương</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Thiết bị y tế </a>
+                        <a class="nav-link" href="/cuahang">Thiết bị y tế </a>
                     </li>
                      <li class="nav-item">
                         <a class="nav-link" href="/contact">Liên hệ</a>

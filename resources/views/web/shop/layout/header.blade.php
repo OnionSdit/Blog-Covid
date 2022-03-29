@@ -1,5 +1,3 @@
-
-
     <!-- Header Section Begin -->
     <header class="header-section">
         <div class="header-top">
@@ -18,9 +16,9 @@
                     <a href="#" class="login-panel"><i class="fa fa-user"></i>Login</a>
                     <div class="lan-selector">
                         <select class="language_drop" name="countries" id="countries" style="width:300px;">
-                            <option value='yt' data-image="img/flag-1.jpg" data-imagecss="flag yt"
+                            <option value='yt' data-image="/shop/img/flag-1.jpg" data-imagecss="flag yt"
                                 data-title="English">English</option>
-                            <option value='yu' data-image="img/flag-2.jpg" data-imagecss="flag yu"
+                            <option value='yu' data-image="/shop/img/flag-2.jpg" data-imagecss="flag yu"
                                 data-title="Bangladesh">German </option>
                         </select>
                     </div>
@@ -39,7 +37,7 @@
                     <div class="col-lg-2 col-md-2">
                         <div class="logo" style="background: #00b4e5;padding: 12px;"  >
                             <a href="#">
-                                <img src="img/logo.png" alt="" style="width: 100%;">
+                                <img src="/shop/img/logo.png" alt="" style="width: 100%;">
                             </a>
                         </div>
                     </div>
@@ -68,7 +66,7 @@
                                         <table>
                                             <tbody>
                                                 <tr>
-                                                    <td class="si-pic"><img src="img/select-product-1.jpg" alt=""></td>
+                                                    <td class="si-pic"><img src="/shop/img/select-product-1.jpg" alt=""></td>
                                                     <td class="si-text">
                                                         <div class="product-selected">
                                                             <p>₫60.00 x 1</p>
@@ -80,7 +78,7 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="si-pic"><img src="img/select-product-2.jpg" alt=""></td>
+                                                    <td class="si-pic"><img src="/shop/img/select-product-2.jpg" alt=""></td>
                                                     <td class="si-text">
                                                         <div class="product-selected">
                                                             <p>₫60.00 x 1</p>

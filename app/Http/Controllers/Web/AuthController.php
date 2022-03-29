@@ -15,7 +15,8 @@ class AuthController extends Controller
 
     public function register()
     {
-        return view('web.auth.register');    }
+        return view('web.auth.register');
+    }
 
     public function store(Request $request)
     {
