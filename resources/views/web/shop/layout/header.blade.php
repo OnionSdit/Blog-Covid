@@ -33,10 +33,10 @@
         </div>
         <div class="container">
             <div class="inner-header">
-                <div class="row" >
+                <div class="row">
                     <div class="col-lg-2 col-md-2">
-                        <div class="logo" style="background: #00b4e5;padding: 12px;"  >
-                            <a href="#">
+                        <div class="logo" style="background: #00b4e5;padding: 12px;">
+                            <a href="/shopping">
                                 <img src="/shop/img/logo.png" alt="" style="width: 100%;">
                             </a>
                         </div>
@@ -59,47 +59,59 @@
                             </li>
                             <li class="cart-icon"><a href="#">
                                     <i class="icon_bag_alt"></i>
-                                    <span>3</span>
+                                    @if (Session::has('Cart') != null)
+                                        <span id="total-quanty-show">{{ Session::get('Cart')->totalQuanty }}</span>
+                                    @else
+                                        <span id="total-quanty-show">0</span>
+                                    @endif
+
                                 </a>
                                 <div class="cart-hover">
-                                    <div class="select-items">
-                                        <table>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="si-pic"><img src="/shop/img/select-product-1.jpg" alt=""></td>
-                                                    <td class="si-text">
-                                                        <div class="product-selected">
-                                                            <p>₫60.00 x 1</p>
-                                                            <h6>Kabino Bedside Table</h6>
-                                                        </div>
-                                                    </td>
-                                                    <td class="si-close">
-                                                        <i class="ti-close"></i>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="si-pic"><img src="/shop/img/select-product-2.jpg" alt=""></td>
-                                                    <td class="si-text">
-                                                        <div class="product-selected">
-                                                            <p>₫60.00 x 1</p>
-                                                            <h6>Kabino Bedside Table</h6>
-                                                        </div>
-                                                    </td>
-                                                    <td class="si-close">
-                                                        <i class="ti-close"></i>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div class="select-total">
-                                        <span>total:</span>
-                                        <h5>₫120.00</h5>
+                                    <div id="change-item-cart">
+                                        @if (Session::has('Cart') != null)
+                                            <div class="select-items">
+                                                <table>
+                                                    <tbody>
+                                                        @foreach (Session::get('Cart')->products as $item)
+                                                            <tr>
+                                                                <td class="si-pic"><img
+                                                                        src="/shop/img/products/{{ $item['productInfo']->img }}"
+                                                                        alt=""></td>
+                                                                <td class="si-text">
+                                                                    <div class="product-selected">
+                                                                        <p>{{ number_format($item['productInfo']->price) }}
+                                                                            đ x <span
+                                                                                class="item-quantity">{{ $item['quanty'] }}</span>
+                                                                        </p>
+
+                                                                        <h6><b>{{ $item['productInfo']->name }}</b>
+                                                                        </h6>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="si-close">
+                                                                    <i class="ti-close"
+                                                                        data-id="{{ $item['productInfo']->id }}"></i>
+                                                                </td>
+                                                            </tr>
+                                                        @endforeach
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="select-total">
+                                                <span>total:</span>
+                                                <h5>{{ number_format(Session::get('Cart')->totalPrice) }} đ</h5>
+                                                <input hidden id="total-quanty-cart" type="number"
+                                                    value="{{ Session::get('Cart')->totalQuanty }}">
+                                            </div>
+
+                                        @endif
+
                                     </div>
                                     <div class="select-button">
-                                        <a href="#" class="primary-btn view-card">VIEW CARD</a>
+                                        <a href="list-cart" class="primary-btn view-card">VIEW CARD</a>
                                         <a href="#" class="primary-btn checkout-btn">CHECK OUT</a>
                                     </div>
+
                                 </div>
                             </li>
                         </ul>

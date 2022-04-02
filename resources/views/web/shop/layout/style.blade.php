@@ -10,3 +10,9 @@
 <link rel="stylesheet" href="/shop/css/jquery-ui.min.css" type="text/css">
 <link rel="stylesheet" href="/shop/css/slicknav.min.css" type="text/css">
 <link rel="stylesheet" href="/shop/css/style.css" type="text/css">
+
+<style>
+    #change-item-cart table tbody tr td img{
+        width: 70px;
+    }
+</style>

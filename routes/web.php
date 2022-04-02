@@ -10,6 +10,7 @@ use App\Http\Controllers\Amin\AuthController;
 use App\Http\Controllers\Web\WebController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Routing\Router;
+use App\Http\Controllers\Web\CartController;
 
 
 
@@ -134,7 +135,12 @@ Route::get('reset-password', [WebAuthController::class, 'formReset'])->name('for
 Route::post('reset-password', [WebAuthController::class, 'resetPassword'])->name('reset-password');
 
 
-Route::get('shopping', [WebController::class, 'showIndexShop'])
+Route::get('shopping', [CartController::class, 'showIndexShop'])
     ->name('web.shop');
-    Route::get('shoppingCart', [WebController::class, 'shoppingCart'])
-    ->name('web.cart');
+// Route::get('shoppingCart', [CartController::class, 'shoppingCart'])
+//     ->name('web.cart');
+
+Route::get('/Add-Cart/{id}', [CartController::class, 'AddCart']);
+Route::get('/Delete-Item-Cart/{id}', [CartController::class, 'deleteItemCart']);
+
+Route::get('list-cart', [CartController::class,'listCart']);

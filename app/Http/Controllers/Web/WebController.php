@@ -21,14 +21,8 @@ class WebController extends Controller
     }
 
 
-    public function showIndexShop()
-    {
-        return view('web.shop.index');
-    }
 
-    public function shoppingCart(){
-        return view('web.shop.cart');
-    }
+
     public function post($slug)
     {
         $post = Post::where('slug', $slug)->first();
