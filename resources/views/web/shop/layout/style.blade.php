@@ -15,4 +15,8 @@
     .img100px img {
              width: 80px;
          }
+
+    .img200px img{
+        width: 240px;
+    }
      </style>

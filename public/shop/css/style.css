@@ -1173,8 +1173,9 @@ ol {
 	position: relative;
 }
 
-.product-item .pi-pic img {
+.product-item .pi-pic {
 	min-width: 100%;
+
 }
 
 .product-item .pi-pic .sale {
@@ -1237,6 +1238,7 @@ ol {
 
 .product-item .pi-text {
 	text-align: center;
+    text-transform: uppercase;
 	padding-top: 26px;
 }
 

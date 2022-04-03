@@ -19,7 +19,7 @@
                     </div>
                 </div>
                 <div class="ht-right">
-                    <a href="#" class="login-panel"><i class="fa fa-user"></i>Login</a>
+                    <a href="#" class="login-panel"><i class="fa fa-user"></i>Xin chào</a>
                     <div class="lan-selector">
                         <select class="language_drop" name="countries" id="countries" style="width:300px;">
                             <option value='yt' data-image="/shop/img/flag-1.jpg" data-imagecss="flag yt"
