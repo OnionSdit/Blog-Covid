@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="/shop/css/style.css" type="text/css">
 
 <style>
-    #change-item-cart table tbody tr td img{
-        width: 70px;
-    }
-</style>
+    .img100px img {
+             width: 80px;
+         }
+     </style>

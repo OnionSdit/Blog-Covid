@@ -137,10 +137,12 @@ Route::post('reset-password', [WebAuthController::class, 'resetPassword'])->name
 
 Route::get('shopping', [CartController::class, 'showIndexShop'])
     ->name('web.shop');
-// Route::get('shoppingCart', [CartController::class, 'shoppingCart'])
-//     ->name('web.cart');
 
 Route::get('/Add-Cart/{id}', [CartController::class, 'AddCart']);
 Route::get('/Delete-Item-Cart/{id}', [CartController::class, 'deleteItemCart']);
 
 Route::get('list-cart', [CartController::class,'listCart']);
+Route::get('/Delete-Item-List-Cart/{id}', [CartController::class, 'deleteListItemCart']);
+
+Route::get('/save-Item-List-Cart/{id}/{quanty}', [CartController::class, 'saveListItemCart']);
+

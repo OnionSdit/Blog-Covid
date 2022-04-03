@@ -49,4 +49,30 @@ class CartController extends Controller
         }
         return view('web.shop.layout.cart');
     }
+
+    public function deleteListItemCart(Request $req, $id)
+    {
+        $oldCart = Session('Cart') ? Session('Cart') : null;
+        $newCart = new Cart($oldCart);
+        $newCart->deleteItemCart($id);
+
+        if(Count($newCart->products) > 0 ){
+            $req->Session()->put('Cart', $newCart);
+        }else {
+            $req->Session()->forget('Cart');
+        }
+        return view('web.shop.layout.list-cart');
+    }
+
+    public function saveListItemCart(Request $req, $id, $quanty)
+    {
+        $oldCart = Session('Cart') ? Session('Cart') : null;
+        $newCart = new Cart($oldCart);
+        $newCart->updateItemCart($id, $quanty);
+
+        $req->Session()->put('Cart', $newCart);
+        return view('web.shop.layout.list-cart');
+    }
+
+
 }

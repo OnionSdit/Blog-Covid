@@ -1,4 +1,10 @@
     <!-- Header Section Begin -->
+    <style>
+        #change-item-cart table tbody tr td img {
+            width: 70px;
+        }
+    </style>
+
     <header class="header-section">
         <div class="header-top">
             <div class="container">

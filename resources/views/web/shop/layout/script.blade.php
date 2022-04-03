@@ -59,8 +59,8 @@
             }
 
             $("#total-quanty-show").text(s);
-
-
         }
+
+
     </script>
     <!--End function -->

@@ -32,7 +32,19 @@
             $this->totalPrice -= $this->products[$id]['price'];
             unset($this->products[$id]);
         }
-    }
 
+        public function updateItemCart($id, $quanty ){
+            //kiem tra
+            $this->totalQuanty -= $this->products[$id]['quanty'];
+            $this->totalPrice -= $this->products[$id]['price'];
+            //tinh toan
+            $this->products[$id]['quanty'] = $quanty;
+            $this->products[$id]['price'] = $quanty * $this->products[$id]['productInfo']->price;
+            //cap nhat
+            $this->totalQuanty += $this->products[$id]['quanty'];
+            $this->totalPrice +=  $this->products[$id]['price'];
+
+        }
+    }
 
 ?>
