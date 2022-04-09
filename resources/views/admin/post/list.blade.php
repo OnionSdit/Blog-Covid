@@ -1,5 +1,5 @@
 @extends('admin.layout.master')
-
+@section('title', 'Danh sách bài viết')
 @section('content')
 
     <div id="page-wrapper">
@@ -26,6 +26,7 @@
                         <th>Highlight post</th>
                         <th>Delete</th>
                         <th>Edit</th>
+
                     </tr>
                     </thead>
                     <tbody>

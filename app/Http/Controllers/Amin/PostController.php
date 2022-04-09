@@ -75,7 +75,7 @@ class PostController extends Controller
             'highlight_post' => $request->highlight_post ? 1 : 0,
         ]);
 
-        return redirect()->route('admin.post.index')->with('success', 'create successfully');
+        return redirect()->route('admin.post.index')->with('success', 'Thêm mới thành công');
     }
 
     public function edit($id)
@@ -135,12 +135,12 @@ class PostController extends Controller
             'highlight_post' => $request->highlight_post ? 1 : 0,
         ]);
 
-        return redirect()->route('admin.post.edit', $id)->with('success', 'Update successfully');
+        return redirect()->route('admin.post.edit', $id)->with('success', 'Cập nhật thành công');
     }
 
     public function delete($id)
     {
         Post::find($id)->delete();
-        return redirect()->route('admin.post.index')->with('success', 'deleted successfully');
+        return redirect()->route('admin.post.index')->with('success', 'Xóa thành công');
     }
 }

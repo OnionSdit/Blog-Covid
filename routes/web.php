@@ -7,6 +7,7 @@ use App\Http\Controllers\Amin\UserController;
 use App\Http\Controllers\Web\UserControllers;
 use App\Http\Controllers\Web\AuthController as WebAuthController;
 use App\Http\Controllers\Amin\AuthController;
+use App\Http\Controllers\Amin\ProductController;
 use App\Http\Controllers\Web\WebController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Routing\Router;
@@ -69,6 +70,28 @@ Route::prefix('admin')->middleware('admin.login')->group(function() {
 
         Route::get('delete/{id}', [PostController::class, 'delete'])
             ->name('admin.post.delete');
+    });
+
+
+    // Product
+    Route::prefix('product')->group(function() {
+        Route::get('', [ProductController::class, 'index'])
+        ->name('admin.product.listProduct');
+
+        Route::get('create', [ProductController::class, 'create'])
+            ->name('admin.product.createProduct');
+
+        Route::post('store', [ProductController::class, 'store'])
+            ->name('admin.product.storeProduct');
+
+        Route::get('edit/{id}', [ProductController::class, 'edit'])
+            ->name('admin.product.editProduct');
+
+        Route::put('update/{id}', [ProductController::class, 'update'])
+            ->name('admin.product.updateProduct');
+
+        Route::get('delete/{id}', [ProductController::class, 'delete'])
+            ->name('admin.product.deleteProduct');
     });
 
     Route::prefix('contact')->group(function() {

@@ -8,7 +8,6 @@
     <title>@yield('title')</title>
 
     @include('admin.layout.style')
-
     @stack('styles')
 </head>
 

@@ -3,40 +3,54 @@
         <div class="input-group custom-search-form">
             <input type="text" class="form-control" placeholder="Search...">
             <span class="input-group-btn">
-                                    <button class="btn btn-default" type="button">
-                                        <i class="fa fa-search"></i>
-                                    </button>
-                                </span>
+                <button class="btn btn-default" type="button">
+                    <i class="fa fa-search"></i>
+                </button>
+            </span>
         </div>
-        <!-- /input-group -->
     </li>
-{{--    <li>--}}
-{{--        <a href="#"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>--}}
-{{--    </li>--}}
+
+
+    {{-- categogy --}}
     <li>
-        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Category<span class="fa arrow"></span></a>
+        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Danh mục<span class="fa arrow"></span></a>
         <ul class="nav nav-second-level">
             <li>
-                <a href="{{ route('admin.category.index') }}">List Category</a>
+                <a href="{{ route('admin.category.index') }}">List Danh mục</a>
             </li>
             <li>
-                <a href="{{ route('admin.category.create') }}">Add Category</a>
+                <a href="{{ route('admin.category.create') }}">Thêm Danh mục</a>
             </li>
         </ul>
-        <!-- /.nav-second-level -->
     </li>
+
+    {{-- Post --}}
     <li>
-        <a href="#"><i class="fa fa-cube fa-fw"></i> Post<span class="fa arrow"></span></a>
+        <a href="#"><i class="fa fa-cube fa-fw"></i> Bài viết<span class="fa arrow"></span></a>
         <ul class="nav nav-second-level">
             <li>
-                <a href="{{ route('admin.post.index') }}">List Post</a>
+                <a href="{{ route('admin.post.index') }}">Danh sách bài viết </a>
             </li>
             <li>
-                <a href="{{ route('admin.post.create') }}">Add Post</a>
+                <a href="{{ route('admin.post.create') }}">Thêm bài viết</a>
             </li>
         </ul>
-        <!-- /.nav-second-level -->
     </li>
+
+    {{-- Sản phẩm --}}
+    <li>
+        <a href="#"><i class="fa fa-cube fa-fw"></i> Sản phẩm<span class="fa arrow"></span></a>
+        <ul class="nav nav-second-level">
+            <li>
+                <a href="{{ route('admin.product.listProduct') }}">Danh sách Sản phẩm</a>
+            </li>
+            <li>
+                <a href="{{ route('admin.product.createProduct') }}">Thêm Sản phẩm</a>
+            </li>
+        </ul>
+    </li>
+
+    {{-- user --}}
     <li>
         <a href="#"><i class="fa fa-users fa-fw"></i> User<span class="fa arrow"></span></a>
         <ul class="nav nav-second-level">
@@ -47,7 +61,6 @@
                 <a href="{{ route('admin.user.create') }}">Add User</a>
             </li>
         </ul>
-        <!-- /.nav-second-level -->
     </li>
     <li>
         <a href="{{ route('admin.contact.index') }}"><i class="fa fa-phone fa-fw"></i> Contact</a>
