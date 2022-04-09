@@ -104,7 +104,7 @@ class ProductController extends Controller
             'img' => isset($image) ? $image : $product->img,
         ]);
 
-        return redirect()->route('admin.product.editProduct', $id)->with('success', 'Cập nhật sản phẩm thành công! ');
+        return redirect()->route('admin.product.listProduct', $id)->with('success', 'Cập nhật sản phẩm thành công! ');
     }
 
     public function delete($id)

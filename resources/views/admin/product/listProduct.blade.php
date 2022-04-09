@@ -23,6 +23,7 @@
                         <th>Tên sản phẩm</th>
                         <th>Hình ảnh</th>
                         <th>Giá</th>
+                        <th>Mô tả</th>
                         <th>Delete</th>
                         <th>Edit</th>
                     </tr>
@@ -34,6 +35,7 @@
                             <td>{{ $product->name }}</td>
                             <td><img src="/shop/img/products/{{ $product->img}}" alt="" style=" width: 50px;"></td>
                             <td>{{ number_format($product->price)}}</td>
+                            <td>{!! $product->description !!}</td>
                             <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="{{ route('admin.product.deleteProduct', $product->id) }}"> Delete</a></td>
                             <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="{{ route('admin.product.editProduct', $product->id) }}">Edit</a></td>
                         </tr>

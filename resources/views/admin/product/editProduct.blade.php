@@ -41,7 +41,7 @@
                         </div>
                         <div class="form-group">
                             <label>Thay đổi ảnh sản phẩm</label>
-                            <input type="file" class="form-control" name="image" accept="image/*" />
+                            <input type="file" class="form-control" name="img" accept="image/*" />
                         </div>
                         <div class="form-group">
                             <label>Mô tả</label>

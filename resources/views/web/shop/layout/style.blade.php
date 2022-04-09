@@ -13,10 +13,18 @@
 
 <style>
     .img100px img {
-             width: 80px;
-         }
+        width: 96px;
+        transition: all 0.3s;
+        position: relative;
+    }
 
-    .img200px img{
+    .img100px img:hover{
+
+        -webkit-transform: scale(1.2); transform: scale(1.2);
+    }
+
+    .img200px img {
         width: 240px;
     }
-     </style>
+
+</style>
