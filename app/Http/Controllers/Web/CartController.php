@@ -7,11 +7,13 @@ use Illuminate\Http\Request;
 use DB;
 use App\Cart;
 use Session;
+use App\Models\User;
 
 class CartController extends Controller
 {
     public function showIndexShop()
     {
+        $users = DB::table('users')->get();
         $products = DB::table('products')->get();
         return view('web.shop.index', compact('products'));
     }
@@ -35,6 +37,7 @@ class CartController extends Controller
         }
         return view('web.shop.layout.cart');
     }
+
 
     public function deleteItemCart(Request $req, $id)
     {
@@ -73,6 +76,4 @@ class CartController extends Controller
         $req->Session()->put('Cart', $newCart);
         return view('web.shop.layout.list-cart');
     }
-
-
 }

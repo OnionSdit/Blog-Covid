@@ -168,4 +168,3 @@ Route::get('list-cart', [CartController::class,'listCart']);
 Route::get('/Delete-Item-List-Cart/{id}', [CartController::class, 'deleteListItemCart']);
 
 Route::get('/save-Item-List-Cart/{id}/{quanty}', [CartController::class, 'saveListItemCart']);
-

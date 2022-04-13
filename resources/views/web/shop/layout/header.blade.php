@@ -3,6 +3,7 @@
         #change-item-cart table tbody tr td img {
             width: 70px;
         }
+
     </style>
 
     <header class="header-section">
@@ -19,7 +20,8 @@
                     </div>
                 </div>
                 <div class="ht-right">
-                    <a href="#" class="login-panel"><i class="fa fa-user"></i>Xin chào </a>
+                    <a href="#" class="login-panel"><i class="fa fa-user"></i>Xin chào
+                    </a>
                     <div class="lan-selector">
                         <select class="language_drop" name="countries" id="countries" style="width:300px;">
                             <option value='yt' data-image="/shop/img/flag-1.jpg" data-imagecss="flag yt"
@@ -145,11 +147,11 @@
                 </div>
                 <nav class="nav-menu mobile-menu">
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Shop</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/shopping">Shop</a></li>
                         <li><a href="#">Collection</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="/">Blog</a></li>
+                        <li><a href="/contact">Contact</a></li>
                         <li><a href="#">Pages</a></li>
                     </ul>
                 </nav>

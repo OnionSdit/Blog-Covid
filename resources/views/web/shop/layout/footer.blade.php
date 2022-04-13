@@ -1,76 +1,52 @@
- <!-- Footer Section Begin -->
- <footer class="footer-section">
-     <div class="container">
-         <div class="row">
-             <div class="col-lg-3">
-                 <div class="footer-left">
-                     <div class="footer-logo">
-                         <a href="#"><img src="img/footer-logo.png" alt=""></a>
-                     </div>
-                     <ul>
-                         <li>Address: 60-49 Road 11378 New York</li>
-                         <li>Phone: +65 11.188.888</li>
-                         <li>Email: hello.colorlib@gmail.com</li>
-                     </ul>
-                     <div class="footer-social">
-                         <a href="#"><i class="fa fa-facebook"></i></a>
-                         <a href="#"><i class="fa fa-instagram"></i></a>
-                         <a href="#"><i class="fa fa-twitter"></i></a>
-                         <a href="#"><i class="fa fa-pinterest"></i></a>
-                     </div>
-                 </div>
-             </div>
-             <div class="col-lg-2 offset-lg-1">
-                 <div class="footer-widget">
-                     <h5>Information</h5>
-                     <ul>
-                         <li><a href="#">About Us</a></li>
-                         <li><a href="#">Checkout</a></li>
-                         <li><a href="#">Contact</a></li>
-                         <li><a href="#">Serivius</a></li>
-                     </ul>
-                 </div>
-             </div>
-             <div class="col-lg-2">
-                 <div class="footer-widget">
-                     <h5>My Account</h5>
-                     <ul>
-                         <li><a href="#">My Account</a></li>
-                         <li><a href="#">Contact</a></li>
-                         <li><a href="#">Shopping Cart</a></li>
-                         <li><a href="#">Shop</a></li>
-                     </ul>
-                 </div>
-             </div>
-             <div class="col-lg-4">
-                 <div class="newslatter-item">
-                     <h5>Join Our Newsletter Now</h5>
-                     <p>Get E-mail updates about our latest shop and special offers.</p>
-                     <form action="#" class="subscribe-form">
-                         <input type="text" placeholder="Enter Your Mail">
-                         <button type="button">Subscribe</button>
-                     </form>
-                 </div>
-             </div>
-         </div>
-     </div>
-     <div class="copyright-reserved">
-         <div class="container">
-             <div class="row">
-                 <div class="col-lg-12">
-                     <div class="copyright-text">
-                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                         Copyright &copy;
-                         <script>
-                             document.write(new Date().getFullYear());
-                         </script> All rights reserved |
-                     </div>
-                     <div class="payment-pic">
-                         <img src="img/payment-method.png" alt="">
-                     </div>
-                 </div>
-             </div>
-         </div>
-     </div>
- </footer>
- <!-- Footer Section End -->
+<style>
+    .footer{
+    background:#00b4e5;
+    width: 100%;
+    padding:50px;
+    padding-top: 40px;
+    /* text-align:center; */
+    float: left;
+    color:#FFF;
+}
+.footer a{
+    padding-right: 10px;
+}
+.footer a:hover{
+    color: rgb(0, 255, 55);
+}
+
+.footer-trai{
+    float: left;
+
+}
+
+.footer-phai{
+    float: right;
+    /* text-align: center; */
+}
+.footer   p{
+    margin: 10px
+}
+
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="footer">
+<div class="footer-trai">
+<p style="font-size: 17px "> © Bản quyền thuộc TRUNG TÂM CÔNG NGHỆ PHÒNG, CHỐNG DỊCH COVID-19 QUỐC GIA </p>
+
+{{-- <h3>LIÊN HỆ: </h3> --}}
+<p> <i class="fa fa-envelope-o" aria-hidden="true"></i> Email: covid19@suckhoedoisong.vn</p>
+<p> <i class="fa fa-phone" aria-hidden="true"></i> Hotline: 19009095</p>
+<p> <i class="fa fa-map-marker" aria-hidden="true"></i> Địa chỉ: Số 138A Giảng Võ - Quận Ba Đình - TP. Hà Nội</p>
+
+</div>
+<div class="footer-phai">
+<a href="#" style="font-size: 17px ">Thống kê</a>
+<a href="#" style="font-size: 17px ">Kiến thức</a>
+<a href="#" style="font-size: 17px ">Liên hệ</a><br>
+<br>
+<p>Quy chế hoạt động </p>
+<p>Chính sách bảo mật</p>
+</div>
+</div>

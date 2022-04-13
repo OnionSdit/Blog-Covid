@@ -63,6 +63,6 @@
         </ul>
     </li>
     <li>
-        <a href="{{ route('admin.contact.index') }}"><i class="fa fa-phone fa-fw"></i> Contact</a>
+        <a href="{{ route('admin.contact.index') }}"><i class="fa fa-phone fa-fw"></i> Bill</a>
     </li>
 </ul>
