@@ -171,25 +171,26 @@
                                         </li>
                                     </ul>
                                     <a class="proceed-btn" href="#myModal" data-toggle="modal">Thanh toán</a>
-                                @endif
-                                <div id="myModal" class="modal fade">
-                                    <div class="modal-dialog modal-confirm">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <div class="icon-box">
-                                                    <i class="material-icons">&#xE876;</i>
+                                    <div id="myModal" class="modal fade">
+                                        <div class="modal-dialog modal-confirm">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <div class="icon-box">
+                                                        <i class="material-icons">&#xE876;</i>
+                                                    </div>
+                                                    <h4 class="modal-title w-100">Thanh toán thành công!</h4>
                                                 </div>
-                                                <h4 class="modal-title w-100">Thanh toán thành công!</h4>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p class="text-center">Cảm ơn bạn đã thanh toán </p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <a href="/shopping" class="btn btn-success btn-block">Tiếp tục mua hàng</a>
+                                                <div class="modal-body">
+                                                    <p class="text-center">Cảm ơn bạn đã thanh toán </p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <a href="/shopping" class="btn btn-success btn-block">Tiếp tục mua hàng</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                    @endif
+
                             </div>
                         </div>
                     </div>
